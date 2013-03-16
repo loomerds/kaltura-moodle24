@@ -13,11 +13,15 @@ Note that all modifications of and additions to the existing Moodle 2.3 Kaltura 
 
 Subject to the limitations stated above, the following is an overview of the state of the update as of March 16, 2013: 
 
-Kaltura Video Resource component - appears fully functional
-Kaltura Video Activity component - appears fully functional
-MyMedia component - My Media KCW uploader requires more testing and possibly modification, otherwise fully functional
-Kaltura Repository upload - not yet updated
-Kaltura Video Presentation component - not yet updated
+	Kaltura Video Resource component - appears fully functional
+
+	Kaltura Video Activity component - appears fully functional
+
+	MyMedia component - My Media KCW uploader requires more testing and possibly modification, otherwise fully functional
+
+	Kaltura Repository upload - not yet updated
+
+	Kaltura Video Presentation component - not yet updated
 
 The code made availabe through this project is offered "As Is" without warranty either expressed or implied.  Use it at your own risk.  However, I hope you will find it helpful.
 
