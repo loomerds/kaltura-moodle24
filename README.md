@@ -19,7 +19,7 @@ Subject to the limitations stated above, the following is an overview of the sta
 
 	MyMedia component - My Media KCW uploader requires more testing and possibly modification, otherwise fully functional
 
-	Kaltura Repository upload - not yet updated
+	Kaltura Repository upload - appears fully functional
 
 	Kaltura Video Presentation component - not yet updated
 
