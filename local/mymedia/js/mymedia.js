@@ -1,6 +1,6 @@
 M.local_mymedia = {};
 
-// M.local_mymedia.init_config is made a part of mymedia.php via the last function call on that page - comment by Loomer
+// M.local_mymedia.init_config is made part of mymedia.php via the last function call on that page - comment by Loomer
 M.local_mymedia.init_config = function (Y, panel_markup, dialog, conversion_script, save_video_script,
                                         uiconf_id, kcw_panel_markup, kcw_markup, loading_panel, edit_meta, 
                                         edit_share_course, edit_share_site, kaltura_partner_id, kaltura_session) {
