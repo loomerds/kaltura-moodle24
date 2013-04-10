@@ -1,28 +1,24 @@
 M.local_mymedia = {};
 
-// M.local_mymedia.init_config is made part of mymedia.php via the last function call on that page - comment by Loomer
-M.local_mymedia.init_config = function (Y, panel_markup, dialog, conversion_script, save_video_script,
+// note that the variable dialog below was changed to dialog0 in line 4 and line 16 to avoid a conflict with the declaration of 
+//a second variable named dialog which had been implemented previously in line 21...how did this code ever work?
+M.local_mymedia.init_config = function (Y, panel_markup, dialog0, conversion_script, save_video_script,
                                         uiconf_id, kcw_panel_markup, kcw_markup, loading_panel, edit_meta, 
                                         edit_share_course, edit_share_site, kaltura_partner_id, kaltura_session) {
 
-  // the following 4 lines and the closing }); below added by Loomer to enable YUI 2in3 within this module
+  // the following 4 lines and the closing }); below added to enable YUI 2in3 within this module to make it compatible with Moodle 2.4
   M.local_mymedia.Y = Y;
   YUI().use('base', 'dom', 'node', 'event-delegate', 'yui2-container', 'yui2-animation', 'yui2-dragdrop','io-base', 'collection', 'tabview', 'json-parse', function(Y) {
     Y.one('body').addClass('yui-skin-sam');
     var YAHOO = Y.YUI2;
 
-    // sets body_node to #page-mymedia-index which is an index of the body tag of the mymedia.php page - comment by Loomer
     var body_node = Y.one("#page-mymedia-index");
     
-    // adds the dialog SimpleDialog panel object created below to the mymedia.php page - comment by Loomer
-    body_node.append(dialog);
-    // adds the kcw_panel_markup object received above to the mymedia.php page - comment by Loomer
+    body_node.append(dialog0);
     body_node.append(kcw_panel_markup);
     
-    // sets kcw_panel to #upload_btn which is an index of an image tag nested deep within the region-main div block on the mymedia.php page - comment by Loomer
     var kcw_panel = Y.one("#upload_btn");
     
-    // creates the dialog object which contains a SimpleDialog panel - comment by Loomer
     var dialog = new YAHOO.widget.SimpleDialog("mymedia_simple_dialog", { 
         width: "20em", 
         effect:{
@@ -39,16 +35,11 @@ M.local_mymedia.init_config = function (Y, panel_markup, dialog, conversion_scri
         context: ["region-main", "tl", "tl", ["beforeShow", "windowResize"], [250, 20]]
     });
     
-    // adds the dialog object to the span block with #maincontent which is nested within the region-main div block on the mymedia.php page - comment by Loomer
-    // note that at this point the dialog object displays no content - comment by Loomer
-    // note that dialog.show() which makes the dialog object visible is not run until the kcw_notification_click(e) function below is called - comment by Loomer
     dialog.render("maincontent");
 
-    // if #upload_btn exists on the mymedia.php page (see kcw_panel instantiation comment above) the kcw_panel object should not be null - comment by Loomer 
     if (null !== kcw_panel) {
 
         // Create panel to hold KCW
-        // note that kcw_panel is the id of a div block nested inside the kcw_panel_c div block on the mymedia.php page - comment by Loomer
         var widget_panel = new YAHOO.widget.Panel("kcw_panel",   { width: "800px",
                                                                    height: "470px",
                                                                    fixedcenter: false,
@@ -61,21 +52,15 @@ M.local_mymedia.init_config = function (Y, panel_markup, dialog, conversion_scri
                                                                    context: ["region-main", "tl", "tl", ["beforeShow", "windowResize"], [80, 50]]
                                                                    });
         
-        // adds the widget_panel object to the div block with id of kcw_panel - comment by Loomer
-        // note that the widget_panel object receives content and is shown when the widget_panel_callback method below is called - comment by Loomer
         widget_panel.render();
         
         // Panel show callback.  Add CSS styles to the main div container
         // to raise it above the rest of the elments on the page
         function widget_panel_callback(e, widget_panel) {
-            // adds the kcw_markup object received at the top above to the body of the widget_panel - comment by Loomer
             widget_panel.setBody(kcw_markup);
-            // makes the widget_panel visible - comment by Loomer
             widget_panel.show();            
         }
 
-        // adds a click event to the kcw_panel object (#upload_btn which says Upload media or record from webcam) - comment by Loomer 
-        // on "click" this calls the widget_panel_callback function and passes it null and the widget_panel object - comment by Loomer
         kcw_panel.on("click", widget_panel_callback, null, widget_panel);
 
         // Add a click event handler to the notifications DIV
@@ -109,7 +94,6 @@ M.local_mymedia.init_config = function (Y, panel_markup, dialog, conversion_scri
         }
     
         // Subscribe to the on click event to close the widget_panel
-        // the following was wrapped in an if block by Loomer because kcw_notification doesn't exist - should follow up on this
         if(null != kcw_notification) {
             kcw_notification.on("click", kcw_notification_click);
         }
@@ -517,7 +501,7 @@ M.local_mymedia.init_config = function (Y, panel_markup, dialog, conversion_scri
         }
 
     }, 'a');
-  // following line added by Loomer to close block - see above at line 7
+  // following line added to close block - see above at line 7
   });
 
 };
