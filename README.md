@@ -22,10 +22,12 @@ Subject to the limitations stated above, the following is an overview of the sta
 	Kaltura Repository upload - appears fully functional
 	
 	Kaltura video embedding via TinyMCE - appears fully functional
-
-	Kaltura Video Presentation component - not yet updated
 	
 	Kaltura Webcam functionality - not yet fully tested, but basically functional
+	
+	Kaltura Video Presentation component - not yet updated
+	
+	Kaltura Screencapture - not yet updated
 
 The code made availabe through this project is offered "As Is" without warranty either expressed or implied.  Use it at your own risk.  However, I hope you will find it helpful.
 
