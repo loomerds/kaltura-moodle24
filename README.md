@@ -17,11 +17,15 @@ Subject to the limitations stated above, the following is an overview of the sta
 
 	Kaltura Video Activity component - appears fully functional
 
-	MyMedia component - My Media KCW uploader requires more testing and possibly modification, otherwise fully functional
+	MyMedia component - appears fully functional
 
 	Kaltura Repository upload - appears fully functional
+	
+	Kaltura video embedding via TinyMCE - appears fully functional
 
 	Kaltura Video Presentation component - not yet updated
+	
+	Kaltura Webcam functionality - not yet fully tested, but basically functional
 
 The code made availabe through this project is offered "As Is" without warranty either expressed or implied.  Use it at your own risk.  However, I hope you will find it helpful.
 
