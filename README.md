@@ -11,7 +11,7 @@ Development and initial testing is being conducted on a Moodle 2.4.1 and Kaltura
 
 Note that all modifications of and additions to the existing Moodle 2.3 Kaltura Vidoe Package addon code have been noted via specific commenting in the code.
 
-Subject to the limitations stated above, the following is an overview of the state of the update as of March 16, 2013: 
+Subject to the limitations stated above, the following is an overview of the state of the update as of April 10, 2013: 
 
 	Kaltura Video Resource component - appears fully functional
 
